@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "rootDir": "./src",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "importHelpers": true,
+    "declarationDir": "dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -11,12 +16,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "types": ["vite/client", "node"]
   },
-  "include": ["src"],
+  "include": ["src", "bin", "bin"],
   "exclude": ["**/*.test.ts", "node_modules", "test/**", ".history/**"]
 }
